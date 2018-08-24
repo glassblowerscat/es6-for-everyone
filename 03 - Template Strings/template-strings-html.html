@@ -15,8 +15,7 @@
 
   const markup = `
     <div class="person">
-      <h2>
-        ${person.name}
+      <h2>${person.name}
         <span class="job">${person.job}</span>
       </h2>
       <p class="location">${person.city}</p>
@@ -24,8 +23,8 @@
     </div>
   `;
 
-  console.log(markup);
   document.body.innerHTML = markup;
+  console.log(markup);
 
 </script>
 </body>
