@@ -16,12 +16,15 @@
     return converted;
   }
 
-  function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
-    return total + (tip * total) + (tax * total);
-  }
+const { USD, AUD } = convertCurrency(100);
+console.log(USD, AUD);
 
-  const bill = tipCalc({ tip: 0.20, total: 200 });
-  console.log(bill);
+function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}){
+  return total + (tip * total) + (tax * total);
+}
+
+const bill = tipCalc();
+console.log(bill);
 
 </script>
 </body>
