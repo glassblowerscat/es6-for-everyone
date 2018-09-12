@@ -21,30 +21,30 @@
   function getPostById(id) {
     // create a new promise
     return new Promise((resolve, reject) => {
-      // using a settimeout to mimick a databse
+      //using a setTimeout to mimic a database
       setTimeout(() => {
-        // find the post we want
+        //find the post we want
         const post = posts.find(post => post.id === id);
         if(post) {
           resolve(post); // send the post back
         } else {
           reject(Error('No Post Was Found!'));
         }
-      }, 200);
+    }, 200);
     });
   }
 
-  function hydrateAuthor(post) {
+  function hydrateAuthor(post){
     // create a new promise
     return new Promise((resolve, reject) => {
       // find the author
-      const authorDetails = authors.find(person => person.name === post.author);
-      if(authorDetails) {
+      const authorDetails = authors.find(person => person.name === post.author)
+      if(authorDetails){
         // "hydrate" the post object with the author object
         post.author = authorDetails;
-        resolve(post);
+        resolve(post)
       } else {
-        reject(Error('Can not find the author'));
+        reject(Error('Cannot find the author'));
       }
     });
   }
@@ -58,9 +58,7 @@
     })
     .catch(err => {
       console.error(err);
-    });
-
-
+    })
 
 </script>
 </body>
