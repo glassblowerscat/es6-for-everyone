@@ -10,12 +10,12 @@
   const person = Symbol('Wes');
 
   const classRoom = {
-    [Symbol('Mark')] : { grade: 50, gender: 'male' },
-    [Symbol('olivia')]: { grade: 80, gender: 'female' },
-    [Symbol('olivia')]: { grade: 80, gender: 'female' },
-  };
+    [Symbol('Mark')]: { grade: 50, gender: 'male' },
+    [Symbol('Olivia')]: { grade: 80, gender: 'female' },
+    [Symbol('Olivia')]: { grade: 80, gender: 'female' },
+  }
 
-  for (const person in classRoom) {
+  for(person in classRoom){
     console.log(person);
   }
 
