@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+
   const phoneHandler = {
     set(target, name, value) {
       target[name] = value.match(/[0-9]/g).join('');
@@ -16,6 +17,7 @@
   }
 
   const phoneNumbers = new Proxy({}, phoneHandler);
+
 </script>
 </body>
 </html>
