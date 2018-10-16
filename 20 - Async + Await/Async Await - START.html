@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
   <title>Custom Promises</title>
 </head>
 
 <body>
-  <script>
+<script>
 
-  </script>
+  function breathe(amount) {
+      return new Promise((resolve, reject) => {
+        if (amount < 500) {
+          reject('That is too small a value');
+        }
+        setTimeout(() => resolve(`Done for ${amount} milliseconds`), amount);
+      });
+    }
+
+    async function go() {
+      console.log('Start');
+      const res = await breathe(500);
+      console.log(res);
+      const res2 = await breathe(1000);
+      console.log(res2);
+      const res3 = await breathe(300);
+      console.log(res3);
+      const res4 = await breathe(600);
+      console.log(res4);
+      console.log('End');
+    }
+
+    go();
+
+</script>
 </body>
 
 </html>
