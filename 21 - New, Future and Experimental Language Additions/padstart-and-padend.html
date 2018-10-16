@@ -2,15 +2,17 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <title>String padStart and padEnd</title>
 </head>
 
 <body>
   <script>
-    const strings = ['short', 'medium size', 'this is really really long', 'this is really reall really really really really long'];
+    const strings = ['short', 'medium size', 'this is really really long', 'this is really realy really really really long'];
     const longestString = strings.sort(str => str.length).map(str => str.length)[0];
 
     strings.forEach(str => console.log(str.padStart(longestString)));
+
   </script>
 </body>
 
